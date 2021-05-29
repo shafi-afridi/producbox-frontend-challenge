@@ -44,19 +44,22 @@ export class DataProvider extends Component {
     };
 
     addItem = (title, price, src) => {
-        const {items} = this.state
-        const id = Number(this.state.itemId)
-        const data = items.push(
-            {"_id": String(id + 1),
-                "title": title,
-                "src": src,
-                "description": "An excellent product",
-                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tortor pretium viverra suspendisse. Euismod in pellentesque massa placerat duis ultricies. A iaculis at erat pellentesque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem integer vitae justo. Massa enim nec dui nunc mattis. Mattis enim ut tellus elementum sagittis vitae et leo. ",
-                "price": Number(price),
-                "count": 1}
-        )
-        this.setState({itemId: id + 1})
-
+        if (title === '' || price === 0 || src === ''){
+            return "Do Nothing"
+        }else{
+            const {items} = this.state
+            const id = Number(this.state.itemId)
+            const data = items.push(
+                {"_id": String(id + 1),
+                    "title": title,
+                    "src": src,
+                    "description": "An excellent product",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tortor pretium viverra suspendisse. Euismod in pellentesque massa placerat duis ultricies. A iaculis at erat pellentesque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem integer vitae justo. Massa enim nec dui nunc mattis. Mattis enim ut tellus elementum sagittis vitae et leo. ",
+                    "price": Number(price),
+                    "count": 1}
+            )
+            this.setState({itemId: id + 1})
+        }
 
     }
 
