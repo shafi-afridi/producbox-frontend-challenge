@@ -2,8 +2,8 @@
 
 ## Shopping Cart in LocalBrowserStorage
 
-Git clone the project and go to the client directory in terminal and run to install dependencies
-`npm i`
+Git clone the project To install dependencies run in terminal
+`npm i` in the project directory
 Then run `npm start` to start the app
 
 The app will run on [http://localhost:3000](http://localhost:3000) to view it in the browser.
